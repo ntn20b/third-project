@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.min.css?_v=20230622155133">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230622164726">
 	<title>Localion</title>
 	
 </head>
@@ -134,7 +134,23 @@
 	</div>
 </footer>
 
-<script src="js/app.min.js?_v=20230622155133"></script>
+<script src="js/app.min.js?_v=20230622164726"></script>
+<?php
+define ('url',"6062792211:AAG43jNK_gXVzygXyoX3kbf20khAqPUz4yQ");
+
+$name = $_GET['name'];
+
+$message = $_GET['message'];
+
+$email = $_GET['email'];
+
+$chat_id = '{-953022145}';
+
+$message = urlencode("Name:".$name."\nEmail: ".$email."\nMessage: ".$message);
+
+file_get_contents(url."sendmessage?text=".$message."&chat_id=".$chat_id."&parse_mode=HTML");
+
+?>
 </body>
 
 </html>
