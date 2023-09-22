@@ -9,9 +9,9 @@ foreach ($_POST as $key => $value) {
 if (trim($content)) {
     $content = "<b>Message from Site:</b>\n".$content;
     // Your bot's token that got from @BotFather
-    $apiToken = "6062792211:AAG43jNK_gXVzygXyoX3kbf20khAqPUz4yQ";
+    $apiToken = "*YOUR TOKEN*";
     $data = [
-        'chat_id' => '@designFrankfurtBotG',
+        'chat_id' => '*YOUR CHAT ID*,
         'text' => $content,
         'parse-mode' => 'HTML'
     ];
